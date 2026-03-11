@@ -1,5 +1,14 @@
 <h3 align="center">Dashly : Live Sales Dashboard</h3>
 
+<p align="center">
+  <a href="https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc"><b>Live Power BI Dashboard</b></a> •
+  <a href="https://www.python.org/"><b>Python</b></a> •
+  <a href="https://www.postgresql.org/"><b>PostgreSQL</b></a> •
+  <a href="https://www.sqlalchemy.org/"><b>SQLAlchemy</b></a> •
+  <a href="https://git-scm.com/"><b>Git</b></a> •
+  <a href="https://github.com/TheMrityunjayPathak/Dashly/actions/workflows/etl_pipeline.yaml"><b>GitHub Actions</b></a>
+</p>
+
 <a href="https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc">
   <img title="Dashly" src="https://github.com/user-attachments/assets/bb5eaa04-6e1f-4e57-b038-160018dd896e">
 </a>
