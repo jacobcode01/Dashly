@@ -1,8 +1,8 @@
 <h3 align="center">Dashly : Live Sales Dashboard</h3>
 
 <div align="center">
-  
-[![Live Dashboard](https://img.shields.io/badge/Live-Dashboard-F2C811?style=flat&logo=powerbi&logoColor=black)](YOUR_POWER_BI_DASHBOARD_LINK)
+
+[![Power BI](https://img.shields.io/badge/Live-Dashboard-F2C811?style=flat&logo=codeforces&logoColor=white)](YOUR_POWER_BI_DASHBOARD_LINK)
 [![ETL Pipeline](https://img.shields.io/github/actions/workflow/status/TheMrityunjayPathak/Dashly/etl_pipeline.yaml?style=flat&label=ETL%20Pipeline&logo=githubactions&logoColor=white)](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-4420C7?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
