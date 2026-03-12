@@ -8,7 +8,7 @@
 [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat&logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-4420C7?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/TheMrityunjayPathak/Dashly/etl_pipeline.yaml?style=flat&label=GitHub%20Actions&logo=githubactions&logoColor=white)](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml)
+[![ETL Pipeline](https://img.shields.io/github/actions/workflow/status/TheMrityunjayPathak/Dashly/etl_pipeline.yaml?style=flat&label=ETL%20Pipeline&logo=githubactions&logoColor=white)](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml)
 
 </div>
 
