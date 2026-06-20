@@ -610,25 +610,23 @@ This section summarizes pipeline performance metrics such as runtime, automation
 > [!NOTE]
 > This setup ensures that the latest data is always available for Power BI dashboards, with no manual effort.
 
-<img title="Automation & Scheduling" src="https://github.com/user-attachments/assets/0708e2eb-6511-4962-bb36-2c77752a8f47">
-
 <hr>
 
 ### 3. Runtime Performance
-| **Workflow Step**                    | **Description**                                      | **Runtime (sec)** |
-| :----------------------------------- | :--------------------------------------------------- | :---------------: |
-| **Set up job**                       | Initializes GitHub Actions environment               |        1s         |
-| **Checkout repository**              | Pulls repository code into the runner                |        1s         |
-| **Set up Python**                    | Installs Python environment (v3.12)                  |        0s         |
-| **Install dependencies**             | Installs libraries from `requirements.txt`           |        22s        |
-| **Run ETL Script**                   | Extracts, transforms, and loads data into PostgreSQL |        3s         |
-| **Run Generate Data Script**         | Generates new synthetic customer and order data      |        4s         |
-| **Run Views Script**                 | Creates / Refreshes analytical SQL views             |        3s         |
-| **Run Export Views Script**          | Exports SQL views as CSV files                       |        2s         |
-| **Upload Exported CSV as Artifacts** | Uploads exported CSVs to GitHub Actions artifacts    |        2s         |
-| **Commit and Push CSVs**             | Commits CSV files to the repository                  |        0s         |
-| **Upload Logs as Artifacts**         | Uploads log files for debugging and tracking         |        1s         |
-| **Post Setup / Cleanup Steps**       | Cleans the environment post-run                      |        2s         |
+| **Workflow Step**                    | **Description**                                      |
+| :----------------------------------- | :--------------------------------------------------- |
+| **Set up job**                       | Initializes GitHub Actions environment               |
+| **Checkout repository**              | Pulls repository code into the runner                |
+| **Set up Python**                    | Installs Python environment (v3.12)                  |
+| **Install dependencies**             | Installs libraries from `requirements.txt`           |
+| **Run ETL Script**                   | Extracts, transforms, and loads data into PostgreSQL |
+| **Run Generate Data Script**         | Generates new synthetic customer and order data      |
+| **Run Views Script**                 | Creates / Refreshes analytical SQL views             |
+| **Run Export Views Script**          | Exports SQL views as CSV files                       |
+| **Upload Exported CSV as Artifacts** | Uploads exported CSVs to GitHub Actions artifacts    |
+| **Commit and Push CSVs**             | Commits CSV files to the repository                  |
+| **Upload Logs as Artifacts**         | Uploads log files for debugging and tracking         |
+| **Post Setup / Cleanup Steps**       | Cleans the environment post-run                      |
 
 > [!NOTE]
 > **Total runtime :** ~47 seconds per pipeline run
@@ -638,8 +636,6 @@ This section summarizes pipeline performance metrics such as runtime, automation
 > `cron` is in UTC (04:30 UTC = 10:00 AM IST)
 > 
 > The ETL pipeline runs within a minute, automatically refreshing dashboard data daily with no manual effort.
-
-<img title="Runtime Performance" src="https://github.com/user-attachments/assets/8dcf62d2-9bb8-4ef4-b0c4-292115dc5079">
 
 <hr>
 
@@ -666,8 +662,6 @@ This section summarizes pipeline performance metrics such as runtime, automation
 
 > [!IMPORTANT]
 > The pipeline runs fully unattended, ensuring consistent daily data updates and automatic Power BI refreshes.
-
-<img title="Reliability and Stability" src="https://github.com/user-attachments/assets/20dbee9f-b68e-4a1a-b512-4ed7f443d587">
 
 <hr>
 
