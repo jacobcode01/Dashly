@@ -600,7 +600,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 
 ### 2. Automation & Scheduling
 | **Attribute**           | **Details**                                         |
-| ----------------------- | :-------------------------------------------------- |
+| :---------------------- | :-------------------------------------------------- |
 | **Automation Tool**     | GitHub Actions                                      |
 | **Execution Frequency** | Daily                                               |
 | **Scheduled Time**      | 10:00 AM IST                                        |
@@ -692,7 +692,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ### 2. Customer Segment Performance
 | **Segment** | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** | **Profit Margin** |
-| ----------- | ------------------: | -------------------: | -------------------: | --------------------: | ----------------: |
+| ----------- | ------------------- | -------------------- | -------------------- | --------------------- | ----------------- |
 | Consumer    |           4,263,570 |            **49.9%** |              757,416 |             **50.5%** |         **17.8%** |
 | Corporate   |           2,742,160 |            **32.1%** |              475,855 |             **31.7%** |         **17.4%** |
 | Home Office |           1,528,321 |            **17.9%** |              266,483 |             **17.8%** |         **17.4%** |
@@ -712,7 +712,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ### 3. Monthly Sales & Profit Performance
 | **Month** | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** | **Profit Margin** |
-| :-------- | ------------------: | -------------------: | -------------------: | --------------------: | ----------------: |
+| --------- | ------------------- | -------------------- | -------------------- | --------------------- | ----------------- |
 | Jan       |             731,193 |             **8.6%** |              130,941 |              **8.7%** |         **17.9%** |
 | Feb       |             666,688 |             **7.8%** |              119,076 |              **7.9%** |         **17.9%** |
 | Mar       |             765,028 |             **9.0%** |              131,184 |              **8.7%** |         **17.1%** |
@@ -741,7 +741,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ### 4. Regional Performance Insights
 | **Region**  | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** |
-| ----------- | ------------------: | -------------------: | -------------------: | --------------------: |
+| ----------- | ------------------- | -------------------- | -------------------- | --------------------- |
 | **West**    |           2,484,870 |                 ~29% |              440,814 |                  ~29% |
 | **East**    |           2,456,014 |                 ~29% |              427,689 |                  ~28% |
 | **Central** |           1,986,280 |                 ~23% |              352,400 |                  ~23% |
@@ -762,7 +762,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ### 5. Sub-Category Performance
 | **Sub-Category**          | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** |
-| ------------------------- | ------------------: | -------------------: | -------------------: | --------------------: |
+| ------------------------- | ------------------- | -------------------- | -------------------- | --------------------- |
 | Paper                     |           1,260,080 |                 ~15% |              223,147 |                  ~15% |
 | Binders                   |             943,376 |                 ~11% |              162,084 |                  ~11% |
 | Phones                    |             879,975 |                 ~10% |              153,018 |                  ~10% |
@@ -789,7 +789,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ### 6. State-wise Sales Performance
 | **State**    | **Total Sales ($)** | **Total Customers** | **% of Total Sales** |
-| :----------- | ------------------: | ------------------: | -------------------: |
+| :----------- | ------------------- | ------------------- | -------------------- |
 | California   |           1,792,545 |                 188 |            **21.4%** |
 | New York     |             924,728 |                 104 |            **11.0%** |
 | Texas        |             903,046 |                  92 |            **10.8%** |
@@ -983,8 +983,8 @@ DB_NAME=dbname
 
 - Open your local `.env` file (this file contains environment variables like API keys, tokens, etc).
 - For each variable, copy :
-  - Name : the key (`DATABASE_URL`)
-  - Value : the corresponding value (`postgres://user:pass@host/db`)
+  - Name : the key (`DB_HOST`)
+  - Value : the corresponding value (`ep-cool-darkness-a1b2c3d4-pooler.us-east-2.aws.neon.tech`)
 - Paste these into the GitHub form fields :
   - Name ➜ enter the variable name
   - Secret ➜ enter the variable value
