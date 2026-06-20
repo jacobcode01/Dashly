@@ -482,7 +482,7 @@ It simplifies queries, ensures consistent logic, and improves performance.
 python scripts/create_views.py
 ```
 
-### 9. Generate New Data (Optional)
+### 9. Generate New Data
 Simulates daily transactions by generating new random data for testing pipeline automation.
 
 Helps verify how dashboards respond to new data over time.
@@ -490,7 +490,7 @@ Helps verify how dashboards respond to new data over time.
 python scripts/generate_data.py
 ```
 
-### 10. Export Views as CSVs (Optional)
+### 10. Export Views as CSVs
 Exports SQL view results to CSV files inside the `views/` folder.
 
 This is useful for sharing datasets or validating dashboard data without connecting to the database.
@@ -498,16 +498,7 @@ This is useful for sharing datasets or validating dashboard data without connect
 python scripts/export_views.py
 ```
 
-### 11. Simulate Full Workflow Locally
-Running all scripts manually helps confirm everything works locally before enabling the scheduled GitHub run.
-```bash
-python scripts/etl.py
-python scripts/create_views.py
-python scripts/generate_data.py
-python scripts/export_views.py
-```
-
-### 12. Check Logs
+### 11. Check Logs
 - Check log files inside the `logs/` folder :
   - `etl.log` : Initial data loading
   - `create_views.log` : SQL views creation
