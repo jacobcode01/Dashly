@@ -58,7 +58,7 @@ Currently, the store relies heavily on multiple spreadsheets and ad-hoc SQL quer
 ## Overview
 - Designed a fully automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for daily data updates.
 - Built Python ETL scripts to extract, transform, and load 50,000+ sales records into a Neon PostgreSQL database.
-- Simulated ~100 new transactions daily to replicate ongoing business activity and test pipeline reliability.
+- Simulated \~100 new transactions daily to replicate ongoing business activity and test pipeline reliability.
 - Integrated Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
 <hr>
@@ -588,9 +588,9 @@ This section summarizes pipeline performance metrics such as runtime, automation
 ### 1. Data Loading Overview
 | **Parameter**          | **Value**                         |
 | :--------------------- | :-------------------------------- |
-| **Dataset Size**       | ~50,000 sales records             |
+| **Dataset Size**       | \~50,000 sales records             |
 | **Tables Used**        | `customers`, `orders`, `products` |
-| **Avg. Daily Inserts** | ~100 new records                  |
+| **Avg. Daily Inserts** | \~100 new records                  |
 | **Database**           | Neon PostgreSQL (cloud-hosted)    |
 
 > [!NOTE]
@@ -629,7 +629,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 | **Post Setup / Cleanup Steps**       | Cleans the environment post-run                      |
 
 > [!NOTE]
-> **Total runtime :** ~47 seconds per pipeline run
+> **Total runtime :** \~47 seconds per pipeline run
 > 
 > **Scheduling :** The workflow runs daily at **10:00 AM IST** using a `cron` schedule (`30 4 * * *`).
 >
@@ -655,9 +655,9 @@ This section summarizes pipeline performance metrics such as runtime, automation
 ### 5. Reliability and Stability
 | **Metric**                | **Value**                | **Remarks**                                |
 | :------------------------ | :----------------------- | :----------------------------------------- |
-| **Total Runtime**         | ~47 seconds              | Fast for a daily automated ETL pipeline    |
+| **Total Runtime**         | \~47 seconds              | Fast for a daily automated ETL pipeline    |
 | **Success Rate**          | 100% (till last run)     | Verified via GitHub Actions workflow panel |
-| **Avg. Records Inserted** | ~100 rows/day            | Lightweight daily incremental updates      |
+| **Avg. Records Inserted** | \~100 rows/day            | Lightweight daily incremental updates      |
 | **Resource Utilization**  | Low CPU and memory usage | Efficient for cloud runners                |
 
 > [!IMPORTANT]
@@ -680,11 +680,11 @@ This section highlights key business insights and trends derived from the Power 
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- Standard Class drives ~60% of total sales (~$5.1M) and profit (~$897K), making it the dominant shipping mode.
-- Second Class contributes ~19% of sales (~$1.65M) and profit (~$293K), showing steady usage.
-- First Class accounts for ~16% of sales (~$1.34M) and ~15% of profit (~$231K), preferred for faster delivery.
-- Same Day contributes ~5% of sales (~$0.44M) and profit (~$79K), lowest usage but fastest option.
-- Profit margins remain consistent across modes (~17-18%), indicating stable logistics and pricing control.
+- Standard Class drives \~60% of total sales (\~$5.1M) and profit (\~$897K), making it the dominant shipping mode.
+- Second Class contributes \~19% of sales (\~$1.65M) and profit (\~$293K), showing steady usage.
+- First Class accounts for \~16% of sales (\~$1.34M) and \~15% of profit (\~$231K), preferred for faster delivery.
+- Same Day contributes \~5% of sales (\~$0.44M) and profit (\~$79K), lowest usage but fastest option.
+- Profit margins remain consistent across modes (\~17-18%), indicating stable logistics and pricing control.
 
 </details>
 
@@ -701,9 +701,9 @@ This section highlights key business insights and trends derived from the Power 
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- Consumer Segment is the main revenue driver, generating ~50% of total sales (~$4.26M) and profit (~$757K).
-- Corporate Segment contributes ~32% of sales (~$2.74M) and profit (~$476K), indicating steady performance.
-- Home Office delivers ~18% of revenue (~$1.53M) and profit (~$266K), smaller but reliable.
+- Consumer Segment is the main revenue driver, generating \~50% of total sales (\~$4.26M) and profit (\~$757K).
+- Corporate Segment contributes \~32% of sales (\~$2.74M) and profit (\~$476K), indicating steady performance.
+- Home Office delivers \~18% of revenue (\~$1.53M) and profit (\~$266K), smaller but reliable.
 - Potential growth opportunity lies in expanding Home Office sales through targeted marketing.
 
 </details>
@@ -730,8 +730,8 @@ This section highlights key business insights and trends derived from the Power 
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- Q4 (Oct-Dec) drives ~27% of annual sales and profit, making it the strongest quarter for promotions.
-- Profit margins stay steady at ~17-18% throughout the year, indicating consistent pricing and cost control.
+- Q4 (Oct-Dec) drives \~27% of annual sales and profit, making it the strongest quarter for promotions.
+- Profit margins stay steady at \~17-18% throughout the year, indicating consistent pricing and cost control.
 - December and March are peak months by sales contribution, ideal for marketing campaigns and seasonal offers.
 - Sales and profit are evenly distributed across months, reflecting stable and predictable performance.
 
@@ -742,19 +742,19 @@ This section highlights key business insights and trends derived from the Power 
 ### 4. Regional Performance Insights
 | **Region**  | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** |
 | ----------- | ------------------- | -------------------- | -------------------- | --------------------- |
-| **West**    |           2,484,870 |                 ~29% |              440,814 |                  ~29% |
-| **East**    |           2,456,014 |                 ~29% |              427,689 |                  ~28% |
-| **Central** |           1,986,280 |                 ~23% |              352,400 |                  ~23% |
-| **South**   |           1,606,887 |                 ~19% |              278,851 |                  ~19% |
+| **West**    |           2,484,870 |                 \~29% |              440,814 |                  \~29% |
+| **East**    |           2,456,014 |                 \~29% |              427,689 |                  \~28% |
+| **Central** |           1,986,280 |                 \~23% |              352,400 |                  \~23% |
+| **South**   |           1,606,887 |                 \~19% |              278,851 |                  \~19% |
 
 <details>
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- West leads with ~29% of revenue (~$2.48M) and profit (~$441K), making it the top-performing region.
-- East contributes ~29% of sales (~$2.46M) and ~28% of profit (~$428K), showing strong and balanced growth.
-- Central adds ~23% of revenue (~$1.99M) and profit (~$352K), reflecting steady mid-level performance.
-- South accounts for ~19% of revenue (~$1.61M) and profit (~$279K), highlighting a key growth opportunity.
+- West leads with \~29% of revenue (\~$2.48M) and profit (\~$441K), making it the top-performing region.
+- East contributes \~29% of sales (\~$2.46M) and \~28% of profit (\~$428K), showing strong and balanced growth.
+- Central adds \~23% of revenue (\~$1.99M) and profit (\~$352K), reflecting steady mid-level performance.
+- South accounts for \~19% of revenue (\~$1.61M) and profit (\~$279K), highlighting a key growth opportunity.
 
 </details>
 
@@ -763,23 +763,23 @@ This section highlights key business insights and trends derived from the Power 
 ### 5. Sub-Category Performance
 | **Sub-Category**          | **Total Sales ($)** | **% of Total Sales** | **Total Profit ($)** | **% of Total Profit** |
 | ------------------------- | ------------------- | -------------------- | -------------------- | --------------------- |
-| Paper                     |           1,260,080 |                 ~15% |              223,147 |                  ~15% |
-| Binders                   |             943,376 |                 ~11% |              162,084 |                  ~11% |
-| Phones                    |             879,975 |                 ~10% |              153,018 |                  ~10% |
-| Furnishings               |             836,955 |                 ~10% |              151,623 |                  ~10% |
-| Art                       |             697,965 |                  ~8% |              120,843 |                   ~8% |
-| Storage                   |             651,268 |                  ~8% |              112,673 |                   ~8% |
-| Accessories               |             643,638 |                  ~7% |              112,007 |                   ~7% |
-| Appliances                |             495,030 |                  ~6% |               90,786 |                   ~6% |
+| Paper                     |           1,260,080 |                 \~15% |              223,147 |                  \~15% |
+| Binders                   |             943,376 |                 \~11% |              162,084 |                  \~11% |
+| Phones                    |             879,975 |                 \~10% |              153,018 |                  \~10% |
+| Furnishings               |             836,955 |                 \~10% |              151,623 |                  \~10% |
+| Art                       |             697,965 |                  \~8% |              120,843 |                   \~8% |
+| Storage                   |             651,268 |                  \~8% |              112,673 |                   \~8% |
+| Accessories               |             643,638 |                  \~7% |              112,007 |                   \~7% |
+| Appliances                |             495,030 |                  \~6% |               90,786 |                   \~6% |
 | Others (8 sub-categories) |                   — |                    — |                    — |                     — |
 
 <details>
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- Paper is the top-performing sub-category, contributing ~15% of total sales (~$1.26M) and profit (~$223K).
-- Binders, Phones, and Furnishings contribute ~31% of total profit (~$467K), forming the high-performing cluster.
-- Art, Storage, and Accessories are solid mid-tier performers, contributing ~23% of total profit combined.
+- Paper is the top-performing sub-category, contributing \~15% of total sales (\~$1.26M) and profit (\~$223K).
+- Binders, Phones, and Furnishings contribute \~31% of total profit (\~$467K), forming the high-performing cluster.
+- Art, Storage, and Accessories are solid mid-tier performers, contributing \~23% of total profit combined.
 - Sub-categories like Copiers and Supplies contribute <5% of total profit, showing limited business impact.
 - Scaling high-value categories (Paper, Phones, Furnishings) can boost revenue while maintaining stable margins.
 
@@ -800,9 +800,9 @@ This section highlights key business insights and trends derived from the Power 
 <summary>Click Here to view Key Insights</summary>
 &nbsp;
 
-- California leads with ~21% sales (~$1.8M) and the highest customer base (188), making it the strongest market.
-- New York + Texas contribute ~22% of total sales (~$1.83M), indicating strong demand in dense regions.
-- Top 5 states generate ~54% of total revenue (~$4.54M), highlighting sales concentration in key markets.
+- California leads with \~21% sales (\~$1.8M) and the highest customer base (188), making it the strongest market.
+- New York + Texas contribute \~22% of total sales (\~$1.83M), indicating strong demand in dense regions.
+- Top 5 states generate \~54% of total revenue (\~$4.54M), highlighting sales concentration in key markets.
 
 </details>
 
@@ -810,20 +810,20 @@ This section highlights key business insights and trends derived from the Power 
 
 ## Impact
 
-- Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at ~47 seconds each.
-- Simulated ~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
+- Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at \~47 seconds each.
+- Simulated \~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
 - Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
 <hr>
 
 ## Key Insights
 
-- Standard Class drives ~60% of sales ($5.1M) and profit ($897K), making it the top profit-driving shipping mode.
-- Consumer Segment generates ~50% of revenue (~$4.26M) and profit (~$757K), our primary customer base.
-- Q4 (Oct-Dec) contributes ~27% of annual revenue, indicating strong seasonal demand, ideal for promotions.
-- Paper, Binders, and Phones are the top-performing sub-categories, together making up ~45% of total revenue.
-- West and East regions lead with ~58% of total sales, while the South with ~19% shows strong growth potential.
-- Top 5 States (CA, NY, TX, PA, OH) generate ~54% of total sales, with CA alone contributing ~21% of sales.
+- Standard Class drives \~60% of sales ($5.1M) and profit ($897K), making it the top profit-driving shipping mode.
+- Consumer Segment generates \~50% of revenue (\~$4.26M) and profit (\~$757K), our primary customer base.
+- Q4 (Oct-Dec) contributes \~27% of annual revenue, indicating strong seasonal demand, ideal for promotions.
+- Paper, Binders, and Phones are the top-performing sub-categories, together making up \~45% of total revenue.
+- West and East regions lead with \~58% of total sales, while the South with \~19% shows strong growth potential.
+- Top 5 States (CA, NY, TX, PA, OH) generate \~54% of total sales, with CA alone contributing \~21% of sales.
 
 <hr>
 
