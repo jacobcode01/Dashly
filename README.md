@@ -1,4 +1,4 @@
-<h3 align="center">Dashly : Live Sales Dashboard</h3>
+<h3 align="center" id="top">Dashly : Live Sales Dashboard</h3>
 
 <div align="center">
 
@@ -242,7 +242,7 @@ FROM orders AS o
 JOIN customers AS c
 ON o.customer_id = c.customer_id
 GROUP BY c.state;
-````
+```
 
 ```sql
 /* segment_wise_monthly_sales_and_profit */
@@ -368,7 +368,7 @@ GROUP BY c.state, p.sub_category;
 First, clone the project from GitHub to your local system.
 ```bash
 git clone https://github.com/themrityunjaypathak/Dashly.git
-````
+```
 
 ### 2. Set Up a Virtual Environment
 To avoid version conflicts and keep your project isolated, create a virtual environment.
@@ -1442,6 +1442,6 @@ This project is licensed under the [MIT License](LICENSE). You are free to use a
 
 <div align='left'>
   
-**[`^        Scroll to Top       ^`](#dashly--live-sales-dashboard)**
+**[`^        Scroll to Top       ^`](#top)**
 
 </div>
