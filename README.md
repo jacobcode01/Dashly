@@ -1399,28 +1399,24 @@ Dashly/
 ├── .github/
 │   └── workflows/
 │       └── etl_pipeline.yaml        # GitHub Actions Workflow File
-│
-├── scripts/
-│   ├── etl.py                       # Script to extract, transform, and load Initial Data
-│   ├── generate_data.py             # Script to generate and append New Random Data
-│   ├── create_views.py              # Script to create or refresh SQL Views in PostgreSQL Database
-│   └── export_views.py              # Script to export SQL Views results as CSV File
-│
+|
 ├── data/
 │   └── sales_data.csv               # Original Raw Dataset
 |
 ├── database/
 │   ├── schema.sql                   # Database Schema
 │   └── views.sql                    # SQL Views
-│
-├── views/
-│   ├── shipping_performance.csv     # Exported SQL Views as CSV Files
-│   └── ...
 |
 ├── images/
 │   ├── banner.png                   # Banner for Home Page
 │   ├── shopping-cart.png            # Multi-Row Card Image
 |   └── ...
+|
+├── scripts/
+│   ├── etl.py                       # Script to extract, transform, and load Initial Data
+│   ├── generate_data.py             # Script to generate and append New Random Data
+│   ├── create_views.py              # Script to create or refresh SQL Views in PostgreSQL Database
+│   └── export_views.py              # Script to export SQL Views results as CSV File
 │
 ├── utils/                           # Reusable Python Functions (utils Package)
 │   ├── __init__.py
@@ -1428,11 +1424,15 @@ Dashly/
 │   ├── generate_random_data.py
 |   └── ...
 |
-├── Dashboard.pbix                   # Power BI Dashboard File
+├── views/
+│   ├── shipping_performance.csv     # Exported SQL Views as CSV Files
+│   └── ...
+|
 ├── .gitignore                       # All files and folders ignored by Git
-├── requirements.txt                 # List of required libraries for the Project
+├── Dashboard.pbix                   # Power BI Dashboard File
 ├── LICENSE                          # License specifying permissions and usage rights
-└── README.md                        # Detailed documentation of the Project
+├── README.md                        # Detailed documentation of the Project
+└── requirements.txt                 # List of required libraries for the Project
 ```
 
 <hr>
