@@ -594,7 +594,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 | **Database**           | Neon PostgreSQL (cloud-hosted)    |
 
 > [!NOTE]
-> This setup simulates real-time superstore sales activity with daily updates to the `orders` and `customers` tables.
+> This setup simulates ongoing business activity with daily updates to the `orders` and `customers` tables.
 
 <hr>
 
