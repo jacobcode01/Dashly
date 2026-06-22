@@ -821,7 +821,7 @@ This section highlights key business insights and trends derived from the Power 
 - Standard Class drives \~60% of sales ($5.1M) and profit ($897K), making it the top profit-driving shipping mode.
 - Consumer Segment generates \~50% of revenue (\~$4.26M) and profit (\~$757K), our primary customer base.
 - Q4 (Oct-Dec) contributes \~27% of annual revenue, indicating strong seasonal demand, ideal for promotions.
-- Paper, Binders, and Phones are the top-performing sub-categories, together making up \~45% of total revenue.
+- Paper, Binders, and Phones are the top-performing sub-categories, together making up \~36% of total revenue.
 - West and East regions lead with \~58% of total sales, while the South with \~19% shows strong growth potential.
 - Top 5 States (CA, NY, TX, PA, OH) generate \~54% of total sales, with CA alone contributing \~21% of sales.
 
