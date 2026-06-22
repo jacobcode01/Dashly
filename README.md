@@ -732,7 +732,7 @@ This section highlights key business insights and trends derived from the Power 
 
 - Q4 (Oct-Dec) drives \~27% of annual sales and profit, making it the strongest quarter for promotions.
 - Profit margins stay steady at \~17-18% throughout the year, indicating consistent pricing and cost control.
-- December and March are peak months by sales contribution, ideal for marketing campaigns and seasonal offers.
+- December and October are peak months by sales contribution, ideal for marketing campaigns and seasonal offers.
 - Sales and profit are evenly distributed across months, reflecting stable and predictable performance.
 
 </details>
