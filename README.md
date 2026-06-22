@@ -778,7 +778,7 @@ This section highlights key business insights and trends derived from the Power 
 &nbsp;
 
 - Paper is the top-performing sub-category, contributing \~15% of total sales (\~$1.26M) and profit (\~$223K).
-- Binders, Phones, and Furnishings contribute \~31% of total profit (\~$467K), forming the high-performing cluster.
+- Binders, Phones, and Furnishings contribute \~31% of total profit (\~$466K), forming the high-performing cluster.
 - Art, Storage, and Accessories are solid mid-tier performers, contributing \~23% of total profit combined.
 - Sub-categories like Copiers and Supplies contribute <5% of total profit, showing limited business impact.
 - Scaling high-value categories (Paper, Phones, Furnishings) can boost revenue while maintaining stable margins.
