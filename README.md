@@ -461,9 +461,9 @@ engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ss
 
 ### 7. Run ETL Script
 This initializes the database and :
-- Cleans Raw CSV data
-- Creates Tables (`customers`, `orders`, `products`)
-- Loads data into the Neon PostgreSQL Database
+- Cleans raw CSV data
+- Creates tables (`customers`, `orders`, `products`)
+- Loads data into the Neon PostgreSQL database
 ```bash
 python scripts/etl.py
 ```
