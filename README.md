@@ -43,22 +43,20 @@ Currently, the store relies heavily on spreadsheets and ad-hoc SQL queries to tr
 - This manual process makes it :
   - Harder to keep the data structured and consistent.
   - Time-consuming to prepare reports.
-  - Difficult to manually update daily transaction data.
+  - Difficult to update and maintain daily transaction records.
   - Challenging for non-technical users to understand key business insights.
     
-- To solve these challenges, Quick Buy aims to build an automated system that :
+- To solve these challenges, Quick Buy built an automated system that :
   - Collects and stores all data in a structured database.
-  - Cleans and updates data automatically using an ETL pipeline.
-  - Uses SQL to analyze data and extract meaningful business insights.
+  - Cleans, updates, and analyzes data automatically using an ETL pipeline and SQL views.
   - Displays insights through an interactive Power BI dashboard.
-  - Helps managers and executives quickly understand business performance and make better decisions.
+  - Helps managers and executives understand business performance and make informed decisions.
 
 <hr>
 
 ## Overview
-- Designed a fully automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for daily data updates.
-- Built Python ETL scripts to extract, transform, and load 50,000+ sales records into a Neon PostgreSQL database.
-- Simulated \~100 new transactions daily to replicate ongoing business activity and test pipeline reliability.
+- Designed an ETL pipeline using Python and SQLAlchemy to load 50K+ transaction records into a Neon PostgreSQL database.
+- Simulated \~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
 - Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
 <hr>
@@ -809,15 +807,15 @@ This section highlights key business insights and trends derived from the Power 
 ## Impact
 
 - Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at \~47 seconds each.
-- Simulated \~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
-- Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
+- Delivers an on-demand Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
+- Surfaces actionable sales insights across regions, segments, and sub-categories to support data-driven business decisions.
 
 <hr>
 
 ## Key Insights
 
 - Standard Class drives \~60% of sales ($5.1M) and profit ($897K), making it the top profit-driving shipping mode.
-- Consumer Segment generates \~50% of revenue (\~$4.26M) and profit (\~$757K), our primary customer base.
+- Consumer Segment generates \~50% of revenue (\~$4.26M) and profit (\~$757K), the primary customer base.
 - Q4 (Oct-Dec) contributes \~27% of annual revenue, indicating strong seasonal demand, ideal for promotions.
 - Paper, Binders, and Phones are the top-performing sub-categories, together making up \~36% of total revenue.
 - West and East regions lead with \~58% of total sales, while the South with \~19% shows strong growth potential.
@@ -1275,115 +1273,20 @@ jobs:
 ### 1. Home Page
 - This page serves as an entry point and navigation hub for the dashboard.
 
-<details>
-<summary>Click Here to view more Details</summary>
-
-### Key Components
-- **Navigation Buttons**
-  - Interactive page navigator that links to the Overview, Customers, and Products pages.
-- **Dashboard Branding**
-  - Displays a themed background image for a modern look.
-- **User Experience**
-  - Designed for clarity and smooth navigation so users can access key insights in one click.
-
-</details>
-
 <img title="Home" src="https://github.com/user-attachments/assets/a15b8d82-a886-492f-af40-3d8d25ea22ad">
 
 ### 2. Overview
 - This page focuses on a high-level summary of overall business performance like orders, customers, and products.
-
-<details>
-<summary>Click Here to view more Details</summary>
-
-### Key Components
-- **Multi-Row Cards : Key Business Metrics**
-  - Data View : `overall_sales_performance`
-  - Purpose : Gives an instant snapshot of business performance at a glance.
-- **Filled Map : Sales by State**
-  - Data View : `state_wise_sales_and_customer_base`
-  - Purpose : Visualizes geographic sales distribution, showing which states drive the most revenue.
-- **Donut Chart : Shipping Performance**
-  - Data View : `shipping_performance`
-  - Purpose : Compares sales and profit by shipping mode, helping identify cost-effective delivery methods.
-- **Stacked Bar Chart : Segment-wise Sales & Profit**
-  - Data View : `segment_wise_sales_and_profit`
-  - Purpose : Shows sales and profit across customer segments.
-- **Bar Chart : Top Customers by Sales**
-  - Data View : `top_customers_by_sales`
-  - Purpose : Highlights top-performing customers, helping identify key contributors to revenue.
-- **Filled Area Chart : Monthly Sales & Profit Trend**
-  - Data View : `month_wise_sales_and_profit`
-  - Purpose : Displays month-wise trends of sales and profit to track seasonal performance and growth.
-
-</details>
 
 <img title="Overview" src="https://github.com/user-attachments/assets/5584efcc-c10a-40c0-b18c-18e907ea64df">
 
 ### 3. Customers
 - This page focuses on understanding customer behavior, performance, and geographic distribution.
 
-<details>
-<summary>Click Here to view more Details</summary>
-
-### Key Components
-- **Multi-Row Card : Customer Performance Summary**
-  - Data View : `overall_customers_performance`
-  - Purpose : Provides an overview of how much each customer contributes on average to sales and profit.
-- **Filled Map : State-wise Customer Base**
-  - Data View : `state_wise_sales_and_customer_base`
-  - Purpose : Visualizes customer distribution across states, helping identify regions with largest customer base.
-- **Stacked Column Chart : Region-wise Monthly Sales**
-  - Data View : `region_wise_monthly_sales`
-  - Purpose : Tracks how sales vary across regions and months, helping spot seasonal and regional trends.
-- **Stacked Column Chart : Region-wise Sales & Profit**
-  - Data View : `region_wise_sales_and_profit`
-  - Purpose : Compares overall sales and profit across regions to identify high- and low-performing areas.
-- **Dual Area Charts : Segment-wise Monthly Sales & Profit**
-  - Data View : `segment_wise_monthly_sales_and_profit`
-  - Purpose : Visualizes monthly trends of sales and profit across customer segments.
-
-</details>
-
 <img title="Customers" src="https://github.com/user-attachments/assets/fd6944a8-59af-43e3-a78d-18b1f92386a4">
 
 ### 4. Products
 - This page focuses on analyzing product performance, category trends, and geographic purchasing behavior.
-
-<details>
-<summary>Click Here to view more Details</summary>
-
-### Key Components
-- **Filled Map : State-wise Most Purchased Sub-category**
-  - Data View : `state_wise_most_purchased_sub_category`
-  - Purpose : Identifies regional preferences and popular product types across states.
-- **Treemap : Category-wise Orders**
-  - Data View : `category_wise_sales_profit_and_orders`
-  - Purpose : Visualizes which categories dominate in orders and their contribution to the business.
-- **Stacked Column Chart : Category-wise Sales and Profit**
-  - Data View : `category_wise_sales_profit_and_orders`
-  - Purpose : Shows which categories dominate in sales and profit and their contribution to the business.
-- **Stacked Bar Chart : Sub-category-wise Sales & Profit**
-  - Data View : `sub_category_wise_sales_and_profit`
-  - Purpose : Compares business performance across all product sub-categories.
-- **Dual Ribbon Charts : Category-wise Monthly Sales & Profit Trends**
-  - Data View : `category_wise_monthly_sales_and_profit`
-  - Purpose : Tracks how each product category performs across months to identify growth patterns.
-- **Gauge Chart : Profit Margin Tracker**
-  - Data Source :
-    - Calculated using total sales and profit.
-  - Configuration :
-    - Minimum : 0%
-    - Maximum : 40%
-    - Target : 30%
-  - Purpose :
-    - Tracks the current profit margin against the target (30%).
-  - Color Logic :
-    - Red (0–10%) ➜ Low profit margin, needs improvement.
-    - Yellow (10–20%) ➜ Moderate margin, progressing toward target.
-    - Green (20–40%) ➜ Healthy profit margin, close to or exceeding target.
-
-</details>
 
 <img title="Products" src="https://github.com/user-attachments/assets/ccf6f4ad-4498-4d0b-9284-0c60feeb19c2">
 
