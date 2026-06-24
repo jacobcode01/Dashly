@@ -55,7 +55,7 @@ Currently, the store relies heavily on spreadsheets and ad-hoc SQL queries to tr
 <hr>
 
 ## Overview
-- Designed an ETL pipeline using Python and SQLAlchemy to load 50K+ transaction records into a Neon PostgreSQL database.
+- Designed an ETL pipeline with Python and SQLAlchemy to load 50,000+ sales records into a PostgreSQL database.
 - Simulated \~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
 - Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
@@ -461,9 +461,9 @@ engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ss
 
 ### 7. Run ETL Script
 This initializes the database and :
-- Cleans raw CSV data
-- Creates tables (`customers`, `orders`, `products`)
-- Loads data into the Neon PostgreSQL Database
+- Clean Raw CSV data
+- Create Tables (`customers`, `orders`, `products`)
+- Load data into a Neon PostgreSQL Database
 ```bash
 python scripts/etl.py
 ```
@@ -506,7 +506,7 @@ python scripts/export_views.py
 
 ## ETL Pipeline
 - The ETL (Extract, Transform, Load) pipeline is the core part of this project.
-- It automatically cleans and loads validated sales data into a PostgreSQL database for the Power BI dashboard.
+- It automatically cleans and loads sales data into a PostgreSQL database for the Power BI dashboard.
 - It is built with Python using SQLAlchemy and is securely configured via environment variables.
 
 ### ETL Pipeline Structure
@@ -807,8 +807,8 @@ This section highlights key business insights and trends derived from the Power 
 ## Impact
 
 - Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at \~47 seconds each.
-- Delivers an on-demand Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
-- Surfaces actionable sales insights across regions, segments, and sub-categories to support data-driven business decisions.
+- Delivers a Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
+- Surfaces sales insights across regions, segments, and sub-categories to support data-driven decisions.
 
 <hr>
 
@@ -890,6 +890,7 @@ After placing connection details in an `.env` file, you can read it via Python u
 
 ```python
 # Importing Libraries
+import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
@@ -943,7 +944,7 @@ DB_NAME=dbname
     - That means all the data is loaded and stored within the .pbix file (or in Power BI Service once published).
     - All reports, visuals and calculations run on this cached data, not on the live data source.
   - **DirectQuery Mode**
-    - In DirectQuery Mode, Power BI does not import or stores data.
+    - In DirectQuery Mode, Power BI does not import or store data.
     - Instead, it sends real-time queries to the data source every time a user interacts with a report.
     - For live data refresh, choose DirectQuery Mode.
     
@@ -977,7 +978,7 @@ DB_NAME=dbname
 <img title="New Repository Secret" src="https://github.com/user-attachments/assets/3bbf4e6b-a834-40c9-af7e-316f72921ebf">
 &nbsp;
 
-- Open your local `.env` file (this file contains environment variables like API keys, tokens, etc).
+- Open your local `.env` file (this file contains environment variables like API keys, tokens, etc.).
 - For each variable, copy :
   - Name : the key (`DB_HOST`)
   - Value : the corresponding value (`ep-cool-darkness-a1b2c3d4-pooler.us-east-2.aws.neon.tech`)
