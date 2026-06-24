@@ -461,9 +461,9 @@ engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}?ss
 
 ### 7. Run ETL Script
 This initializes the database and :
-- Clean Raw CSV data
-- Create Tables (`customers`, `orders`, `products`)
-- Load data into a Neon PostgreSQL Database
+- Cleans Raw CSV data
+- Creates Tables (`customers`, `orders`, `products`)
+- Loads data into the Neon PostgreSQL Database
 ```bash
 python scripts/etl.py
 ```
@@ -807,8 +807,8 @@ This section highlights key business insights and trends derived from the Power 
 ## Impact
 
 - Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at \~47 seconds each.
-- Delivers a Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
-- Surfaces sales insights across regions, segments, and sub-categories to support data-driven decisions.
+- Delivered a Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
+- Surfaced sales insights across regions, segments, and sub-categories to support data-driven decisions.
 
 <hr>
 
