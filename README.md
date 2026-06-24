@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Power BI](https://img.shields.io/badge/Live-Dashboard-F2C811?style=flat&logo=codeforces&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc)
+[![Power BI](https://img.shields.io/badge/Live-Dashboard-F2C811?style=flat&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc)
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-08872B?style=flat&logo=githubactions&logoColor=white)](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-4420C7?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
@@ -39,9 +39,9 @@
 ## Problem Statement
 Quick Buy is a superstore operating across the United States.
 
-Currently, the store relies heavily on multiple spreadsheets and ad-hoc SQL queries to track business performance.
+Currently, the store relies heavily on spreadsheets and ad-hoc SQL queries to track business performance.
 - This manual process makes it :
-  - Hard to keep data structured and consistent.
+  - Harder to keep the data structured and consistent.
   - Time-consuming to prepare reports.
   - Difficult to manually update daily transaction data.
   - Challenging for non-technical users to understand key business insights.
@@ -59,7 +59,7 @@ Currently, the store relies heavily on multiple spreadsheets and ad-hoc SQL quer
 - Designed a fully automated ETL pipeline using Python, SQLAlchemy, and GitHub Actions for daily data updates.
 - Built Python ETL scripts to extract, transform, and load 50,000+ sales records into a Neon PostgreSQL database.
 - Simulated \~100 new transactions daily to replicate ongoing business activity and test pipeline reliability.
-- Integrated Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
+- Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
 <hr>
 
@@ -414,7 +414,6 @@ pip install --upgrade pip
 ### 5. Setup Environment Variables
 This project uses a `.env` file to store database credentials like `DB_USER`, `DB_PASS`, `DB_NAME`, etc.
 
-Environment variables are stored in plain text.
 ```ini
 # .env
 DB_HOST=host_name
@@ -516,7 +515,7 @@ python scripts/export_views.py
 | **Script Name**    | **Purpose**                                                                                  |
 | :----------------- | :------------------------------------------------------------------------------------------- |
 | `etl.py`           | Sets up the database schema, cleans the dataset, and loads initial data into the database.   |
-| `create_views.py`  | Creates multiple SQL views that summarize and aggregate data for Power BI dashboard.         |
+| `create_views.py`  | Creates multiple SQL views that summarize and aggregate data for the Power BI dashboard.     |
 | `generate_data.py` | Generates random synthetic transaction data to simulate daily updates in the database.       |
 
 ### How does the ETL pipeline work?
@@ -546,7 +545,7 @@ python scripts/export_views.py
 - **Database Connection**
   - Connects to the database securely using environment variables.
 - **Define SQL Views**
-  - Creates multiple SQL views to extract key business insights.
+  - Creates multiple SQL views to summarize and aggregate key business insights.
 - **Execute & Commit**
   - Executes each `CREATE OR REPLACE VIEW` statement and commits changes.
 - **Logging Setup**
@@ -656,7 +655,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 | **Metric**                | **Value**                | **Remarks**                                |
 | :------------------------ | :----------------------- | :----------------------------------------- |
 | **Total Runtime**         | \~47 seconds              | Fast for a daily automated ETL pipeline    |
-| **Success Rate**          | 100% (till last run)     | Verified via GitHub Actions workflow panel |
+| **Success Rate**          | 100%                      | Verified via GitHub Actions workflow panel |
 | **Avg. Records Inserted** | \~100 rows/day            | Lightweight daily incremental updates      |
 | **Resource Utilization**  | Low CPU and memory usage | Efficient for cloud runners                |
 
@@ -733,7 +732,7 @@ This section highlights key business insights and trends derived from the Power 
 - Q4 (Oct-Dec) drives \~27% of annual sales and profit, making it the strongest quarter for promotions.
 - Profit margins stay steady at \~17-18% throughout the year, indicating consistent pricing and cost control.
 - December and October are peak months by sales contribution, ideal for marketing campaigns and seasonal offers.
-- Sales and profit are evenly distributed across months, reflecting stable and predictable performance.
+- Sales and profit are relatively evenly distributed across months, reflecting stable and predictable performance.
 
 </details>
 
@@ -780,7 +779,6 @@ This section highlights key business insights and trends derived from the Power 
 - Paper is the top-performing sub-category, contributing \~15% of total sales (\~$1.26M) and profit (\~$223K).
 - Binders, Phones, and Furnishings contribute \~31% of total profit (\~$466K), forming the high-performing cluster.
 - Art, Storage, and Accessories are solid mid-tier performers, contributing \~23% of total profit combined.
-- Sub-categories like Copiers and Supplies contribute <5% of total profit, showing limited business impact.
 - Scaling high-value categories (Paper, Phones, Furnishings) can boost revenue while maintaining stable margins.
 
 </details>
