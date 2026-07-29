@@ -53,7 +53,7 @@
 
 ## Workflow
 
-<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/2746f3b6-2a24-400c-bcdd-455653e0cd31">
+<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/4a689ba3-3350-4476-8939-6dde194892fa">
 
 <hr>
 
@@ -68,7 +68,7 @@ The ER (Entity-Relationship) diagram visually represents how different tables in
 - **Orders Table ➜ Central Table**
   - Serves as the main transactional table, linking customers and products.
 
-<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/e8767755-356f-4f92-9820-cf4438c8cbc5">
+<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/2746f3b6-2a24-400c-bcdd-455653e0cd31">
 
 <hr>
 
