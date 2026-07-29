@@ -13,7 +13,7 @@
 </div>
 
 <a href="https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc">
-  <img title="Dashly" src="https://github.com/user-attachments/assets/6fbf6ab0-0a3d-4b83-a786-635a463b1661">
+  <img title="Dashly" src="https://github.com/user-attachments/assets/bb5eaa04-6e1f-4e57-b038-160018dd896e">
 </a>
 
 ## Table of Contents
@@ -1015,23 +1015,24 @@ name: ETL Pipeline Automation
 # ---------------- When should it run? ----------------
 on:
   schedule:
-    - cron: "30 4 * * *"   # Run the workflow daily at 10:00 AM
-  workflow_dispatch:       # Allow manual run from GitHub UI
+    - cron: "30 4 * * *" # Run the workflow daily at 10:00 AM
+  workflow_dispatch: # Allow manual run from GitHub UI
 
 # ---------------- Authority to update Repository ----------------
 permissions:
   contents: write
 
-# ---------------- Prevent overlapping runs from racing on the DB / git push ----------------
+# ---------------- Run Only One Pipeline at a Time ----------------
+# Queues overlapping runs (cron + manual) instead of letting them race on the DB
 concurrency:
   group: etl-pipeline
-  cancel-in-progress: false
+  cancel-in-progress: false # Don't kill an in-progress run, let it finish, queue the next one instead
 
 # ---------------- Set of steps to run ----------------
 jobs:
   data-pipeline:
-    runs-on: ubuntu-latest   # Use a Linux VM for the Job
-    timeout-minutes: 30      # Prevents stuck workflows from running forever
+    runs-on: ubuntu-latest # Use a Linux VM for the Job
+    timeout-minutes: 30 # Prevents stuck workflows from running forever
 
     env: # Shared env variables available to all scripts
       DB_USER: ${{ secrets.DB_USER }}
@@ -1055,7 +1056,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: "pip"
+          cache: "pip" # Speeds up installs by caching pip packages between runs
 
       # ---------------- Step 3 : Install Dependencies ----------------
       # Installs all Python libraries listed in requirements.txt
@@ -1159,6 +1160,7 @@ concurrency:
 ```
 - Ensures only one run of this workflow executes at a time.
 - If the daily `schedule` and a manual `workflow_dispatch` overlap, the second run queues instead of running in parallel.
+- `cancel-in-progress: false` means the in-progress run is never killed, it finishes fully before the queued run starts.
 - Prevents two runs from racing on the same database truncate/insert or pushing conflicting commits.
 
 <hr>
@@ -1370,4 +1372,3 @@ This project is licensed under the [MIT License](LICENSE). You are free to use a
 **[`^        Scroll to Top       ^`](#top)**
 
 </div>
-
