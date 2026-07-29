@@ -53,7 +53,13 @@
 
 ## Workflow
 
-<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/d86cbf20-5d87-4a44-9f16-9d5096dd7e22">
+<details>
+<summary>Click Here to view Workflow Diagram</summary>
+&nbsp;
+
+<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/a623868e-ad97-4e6d-8e74-2aefdf62a2bb">
+
+</details>
 
 <hr>
 
