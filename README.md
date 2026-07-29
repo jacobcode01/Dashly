@@ -2,13 +2,7 @@
 
 <div align="center">
 
-[![Power BI](https://img.shields.io/badge/Live-Dashboard-F2C811?style=flat&logo=codeforces&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc)
-[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-08872B?style=flat&logo=githubactions&logoColor=white)](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-4420C7?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat&logo=sqlalchemy&logoColor=white)](https://www.sqlalchemy.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-679CC7?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)](https://git-scm.com/)
+[Power BI](https://app.powerbi.com/view?r=eyJrIjoiZTgxODBhYmMtYjc1Zi00YjVkLWIyZDItZDYxY2RjZmIwNGY5IiwidCI6ImZhYjAyYzVkLTYxYjYtNGIxMi05ZTY2LTdhMDhkOWY0ZmNjMSJ9&pageName=5b9aaf645951a59cacdc) &nbsp;|&nbsp; [GitHub Actions](https://github.com/themrityunjaypathak/Dashly/actions/workflows/etl_pipeline.yaml) &nbsp;|&nbsp; [Python](https://www.python.org/) &nbsp;|&nbsp; [Pandas](https://pandas.pydata.org/) &nbsp;|&nbsp; [SQLAlchemy](https://www.sqlalchemy.org/) &nbsp;|&nbsp; [PostgreSQL](https://www.postgresql.org/) &nbsp;|&nbsp; [Git](https://git-scm.com/)
 
 </div>
 
