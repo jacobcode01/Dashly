@@ -68,7 +68,7 @@ The ER (Entity-Relationship) diagram visually represents how different tables in
 - **Orders Table ➜ Central Table**
   - Serves as the main transactional table, linking customers and products.
 
-<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/2746f3b6-2a24-400c-bcdd-455653e0cd31">
+<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/32dc2141-7212-484e-bc35-6baca7b20458">
 
 <hr>
 
