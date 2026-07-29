@@ -53,7 +53,7 @@
 
 ## Workflow
 
-<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/476a321a-1495-4a16-99cb-f72eb4e60431">
+<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/d86cbf20-5d87-4a44-9f16-9d5096dd7e22">
 
 <hr>
 
