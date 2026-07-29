@@ -515,6 +515,9 @@ python scripts/export_views.py
 #### 1. `etl.py`
 - This script handles the first step of the process by preparing the database.
 
+<details>
+<summary>Click Here to View Details</summary>
+
 #### What does it do?
 - **Load Configuration**
   - Reads environment variables (like `DB_HOST`, `DB_NAME`) from a `.env` file for secure database access.
@@ -529,10 +532,15 @@ python scripts/export_views.py
 - **Schema Management**
   - Ensures relationships between tables using foreign keys and maintains data integrity.
 
+</details>
+
 ---
 
 #### 2. `generate_data.py`
 - This script keeps the database updated with new transaction data for scheduled data refresh in Power BI.
+
+<details>
+<summary>Click Here to View Details</summary>
 
 #### What does it do?
 - **Generate Random Data**
@@ -544,10 +552,15 @@ python scripts/export_views.py
 - **Logging Setup**
   - Saves process logs in `logs/generate_data.log`.
 
+</details>
+
 ---
 
 #### 3. `create_views.py`
 - This script builds SQL views in the PostgreSQL database to simplify analysis and reporting in Power BI.
+
+<details>
+<summary>Click Here to View Details</summary>
 
 #### What does it do?
 - **Database Connection**
@@ -558,6 +571,10 @@ python scripts/export_views.py
   - Executes each `CREATE OR REPLACE VIEW` statement and commits changes.
 - **Logging Setup**
   - Stores execution logs in `logs/create_views.log`.
+
+</details>
+
+---
 
 Once this cycle is complete, the process repeats automatically.
 
@@ -574,7 +591,7 @@ Once this cycle is complete, the process repeats automatically.
    +----------------------+     +----------------------+     +----------------------+
                |
                |
-               +--> back into PostgreSQL Database (next day's 10:00 AM IST cron run)
+               +--> Back into PostgreSQL Database (next day's 10:00 AM IST cron run)
 ```
 
 This ensures that the Power BI Dashboard always displays the latest insights automatically.
