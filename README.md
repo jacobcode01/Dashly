@@ -951,7 +951,7 @@ DB_NAME=dbname
 
 - Once connected, you'll see a list of all available tables and views from your Neon database.
 - Select the ones you want to use in your report and Click Load.
-<img title="Loading Required Data" src="https://github.com/user-attachments/assets/5fd32b9e-826c-4351-95f0-34ff712460fa">
+<img title="Loading Required Data" src="https://github.com/user-attachments/assets/6f582a78-4eff-45b1-9170-acdccbb08cac">
 &nbsp;
 
 - Power BI is now connected to your Neon PostgreSQL database.
