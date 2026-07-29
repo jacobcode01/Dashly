@@ -45,15 +45,15 @@
 <hr>
 
 ## Overview
-- Designed an ETL pipeline with Python and SQLAlchemy to load 50K+ sales records into a PostgreSQL database.
-- Simulated \~100 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
+- Designed an ETL pipeline with Python and SQLAlchemy to load 20K+ sales records into a PostgreSQL database.
+- Simulated \~70 new transactions daily to replicate ongoing business activity and validate pipeline reliability.
 - Connected Power BI to PostgreSQL to deliver an auto-refreshing dashboard with no manual updates.
 
 <hr>
 
 ## Workflow
 
-<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/4a689ba3-3350-4476-8939-6dde194892fa">
+<img title="Workflow Diagram" src="https://github.com/user-attachments/assets/2746f3b6-2a24-400c-bcdd-455653e0cd31">
 
 <hr>
 
@@ -68,7 +68,7 @@ The ER (Entity-Relationship) diagram visually represents how different tables in
 - **Orders Table ➜ Central Table**
   - Serves as the main transactional table, linking customers and products.
 
-<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/2746f3b6-2a24-400c-bcdd-455653e0cd31">
+<img width="500px" title="ER Diagram" src="https://github.com/user-attachments/assets/e8767755-356f-4f92-9820-cf4438c8cbc5">
 
 <hr>
 
@@ -486,8 +486,9 @@ python scripts/export_views.py
 ### 11. Check Logs
 - Check log files inside the `logs/` folder :
   - `etl.log` : Initial data loading
-  - `create_views.log` : SQL views creation
   - `generate_data.log` : Daily data generation
+  - `create_views.log` : SQL views creation
+  - `export_views.log` : CSV export from views
 - Logs help you monitor pipeline performance and troubleshoot errors quickly.
 
 <hr>
@@ -561,20 +562,19 @@ generate_data.py ➜ create_views.py ➜ Power BI Refresh ➜ New Insights
 This ensures that the Power BI Dashboard always displays the latest insights automatically.
 
 ```
-82 +----------------------+     +----------------------+     +----------------------+
-82 |     Raw CSV Data     |     |      ETL Script      |     |      PostgreSQL      |
-82 |   (sales_data.csv)   | --> |       (etl.py)       | --> |       Database       |
-82 +----------------------+     +----------------------+     +----------------------+
-71                                                                       |
-71                                                                       v
-82 +----------------------+     +----------------------+     +----------------------+
-82 | Generate Data Script |     |       Power BI       |     |     Views Script     |
-82 |  (generate_data.py)  | <-- |      Dashboard       | <-- |  (create_views.py)   |
-82 +----------------------+     +----------------------+     +----------------------+
-13             |
-59             +---------------------------------------------+
-59                                                           |
-127                                                           +--> back into PostgreSQL Database (next day's 10:00 AM IST cron run)
+   +----------------------+     +----------------------+     +----------------------+
+   |     Raw CSV Data     |     |      ETL Script      |     |      PostgreSQL      |
+   |   (sales_data.csv)   | --> |       (etl.py)       | --> |       Database       |
+   +----------------------+     +----------------------+     +----------------------+
+                                                                          |
+                                                                          v
+   +----------------------+     +----------------------+     +----------------------+
+   | Generate Data Script |     |       Power BI       |     |     Views Script     |
+   |  (generate_data.py)  | <-- |      Dashboard       | <-- |  (create_views.py)   |
+   +----------------------+     +----------------------+     +----------------------+
+               |
+               |
+               +--> back into PostgreSQL Database (next day's 10:00 AM IST cron run)
 ```
 
 <hr>
@@ -588,9 +588,9 @@ This section summarizes pipeline performance metrics such as runtime, automation
 ### 1. Data Loading Overview
 | **Parameter**          | **Value**                         |
 | :--------------------- | :-------------------------------- |
-| **Dataset Size**       | \~50,000 sales records            |
+| **Dataset Size**       | 20K+ sales records                |
 | **Tables Used**        | `customers`, `orders`, `products` |
-| **Avg. Daily Inserts** | \~100 new records                 |
+| **Avg. Daily Inserts** | \~70 new orders                   |
 | **Database**           | Neon PostgreSQL (cloud-hosted)    |
 
 > [!NOTE]
@@ -643,7 +643,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 | **Aspect**         | **Implementation Details**                                                     |
 | :----------------- | :----------------------------------------------------------------------------- |
 | **Error Tracking** | Structured `try–except` error handling in each script                          |
-| **Log Files**      | `etl.log`, `generate_data.log`, `create_views.log`                             |
+| **Log Files**      | `etl.log`, `generate_data.log`, `create_views.log`, `export_views.log`         |
 | **Log Storage**    | Uploaded as GitHub Actions run artifacts                                       |
 | **Security**       | All credentials securely stored in GitHub Secrets (`DB_USER`, `DB_PASS`, etc.) |
 
@@ -657,7 +657,7 @@ This section summarizes pipeline performance metrics such as runtime, automation
 | :------------------------ | :------------------------ | :----------------------------------------- |
 | **Total Runtime**         | \~47 seconds              | Fast for a daily automated ETL pipeline    |
 | **Success Rate**          | 100%                      | Verified via GitHub Actions workflow panel |
-| **Avg. Records Inserted** | \~100 rows/day            | Lightweight daily incremental updates      |
+| **Avg. Records Inserted** | \~70 orders/day           | Lightweight daily incremental updates      |
 | **Resource Utilization**  | Low CPU and memory usage  | Efficient for cloud runners                |
 
 > [!IMPORTANT]
@@ -789,11 +789,11 @@ This section highlights key business insights and trends derived from the Power 
 ### 6. State-wise Sales Performance
 | **State**    | **Total Sales ($)** | **Total Customers** | **% of Total Sales** |
 | :----------- | :------------------ | :------------------ | :------------------- |
-| California   |           1,792,545 |                 188 |            **21.4%** |
-| New York     |             924,728 |                 104 |            **11.0%** |
-| Texas        |             903,046 |                  92 |            **10.8%** |
-| Pennsylvania |             472,741 |                  45 |             **5.6%** |
-| Ohio         |             451,732 |                  51 |             **5.4%** |
+| California   |           1,792,545 |                 188 |            **21.0%** |
+| New York     |             924,728 |                 104 |            **10.8%** |
+| Texas        |             903,046 |                  92 |            **10.6%** |
+| Pennsylvania |             472,741 |                  45 |             **5.5%** |
+| Ohio         |             451,732 |                  51 |             **5.3%** |
 
 <details>
 <summary>Click Here to view Key Insights</summary>
@@ -809,7 +809,7 @@ This section highlights key business insights and trends derived from the Power 
 
 ## Impact
 
-- Automated the workflow using GitHub Actions, achieving zero failures across 200+ runs at \~47 seconds each.
+- Automated the workflow using GitHub Actions, achieving zero failures across 250+ runs at \~47 seconds each.
 - Delivered a Power BI dashboard that auto-refreshes daily with no manual effort, eliminating ad-hoc reporting.
 - Surfaced sales insights across regions, segments, and sub-categories to support data-driven decisions.
 
