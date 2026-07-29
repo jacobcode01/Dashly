@@ -553,13 +553,7 @@ python scripts/export_views.py
 - **Logging Setup**
   - Stores execution logs in `logs/create_views.log`.
 
-Once this cycle is complete, the process repeats automatically :
-
-```
-generate_data.py ➜ create_views.py ➜ Power BI Refresh ➜ New Insights
-```
-
-This ensures that the Power BI Dashboard always displays the latest insights automatically.
+Once this cycle is complete, the process repeats automatically.
 
 ```
    +----------------------+     +----------------------+     +----------------------+
@@ -576,6 +570,8 @@ This ensures that the Power BI Dashboard always displays the latest insights aut
                |
                +--> back into PostgreSQL Database (next day's 10:00 AM IST cron run)
 ```
+
+This ensures that the Power BI Dashboard always displays the latest insights automatically.
 
 <hr>
 
@@ -1159,8 +1155,8 @@ concurrency:
   cancel-in-progress: false
 ```
 - Ensures only one run of this workflow executes at a time.
-- If the daily `schedule` and a manual `workflow_dispatch` overlap, the second run queues instead of running in parallel.
-- `cancel-in-progress: false` means the in-progress run is never killed, it finishes fully before the queued run starts.
+- If automated `cron` and manual `workflow_dispatch` overlap, the second run queues instead of running in parallel.
+- `cancel-in-progress: false` means the in-progress run finishes fully before the queued run starts.
 - Prevents two runs from racing on the same database truncate/insert or pushing conflicting commits.
 
 <hr>
